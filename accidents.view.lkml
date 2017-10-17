@@ -1,6 +1,13 @@
 view: accidents {
   sql_table_name: faa.accidents ;;
 
+  dimension: accident_lookup_dim {
+    sql: ${accident_number} || ' | ' || ${id} ;;
+  }
+  parameter: accident_lookup {
+    suggest_dimension: accident_lookup_dim
+  }
+
   dimension: id {
     primary_key: yes
     type: number
