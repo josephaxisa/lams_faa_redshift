@@ -1,6 +1,29 @@
 view: accidents {
   sql_table_name: faa.accidents ;;
 
+  parameter: param_dynamic_measure {
+    type: unquoted
+    allowed_value: {value: "d" label:"Deaths"}
+    allowed_value: {value: "da" label:"Deaths & major injuries"}
+    allowed_value: {value: "dai" label:"Deaths, major & minor injuries"}
+  }
+
+  dimension: chosen_dynamic_measure  {
+    #hidden: yes
+    sql:{% parameter param_dynamic_measure %};;
+  }
+
+  measure: dynamic_measure {
+    label_from_parameter: param_dynamic_measure
+    sql:
+         {% if chosen_dynamic_measure._sql == "d" %} ${number_of_fatalities}
+         {% elsif chosen_dynamic_measure._sql == "da" %} ${number_of_fatalities} + ${number_of_serious_injuries}
+         {% elsif chosen_dynamic_measure._sql == "dai" %} ${number_of_fatalities} + ${number_of_serious_injuries} + ${number_of_minor_injuries}
+         {% else %}  ${number_of_fatalities} + 0.5 * ${number_of_serious_injuries} + 0.1 * ${number_of_minor_injuries}
+         {% endif %}
+        ;;
+  }
+
   dimension: accident_lookup_dim {
     sql: ${accident_number} || '<id ' || ${id} || '>' ;;
   }
