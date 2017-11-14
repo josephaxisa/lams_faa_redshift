@@ -143,7 +143,7 @@ view: carrier_summaries {
   dimension: carrier_id {hidden:yes}
   dimension: first_flight_time {view_label:"Carriers"}
   dimension: carrier_rate_delayed_over_5_minutes {
-    label:"Flight Delay Rate [Carrier]"
+    label:"Flight Delay Rate [All flights]"
     description:"Percentage of selected flights for this carrier delayed (over 5 minutes)"
 
   }
@@ -192,6 +192,7 @@ view: carrier_subtotals {
     value_format_name:percent_1
   }
   measure: average_carrier_delay_rate {
+    label:"Average Flight Delay Rate [Selected]"
     type:average
     description:"Average over carriers of the rate of their selected flights that were delayed (over 5 minutes)"
     sql:${rate_delayed_over_5_minutes};;
