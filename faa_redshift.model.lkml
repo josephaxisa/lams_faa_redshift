@@ -133,19 +133,26 @@ view: carrier_summaries {
   derived_table: {
     #persist it!
     sql:
-      SELECT carrier_id, MIN(dep_time) as first_flight_time
+      SELECT  carrier_id,
+              MIN(dep_time) as first_flight_time,
+              COUNT(CASE WHEN dep_delay > 5 END)/COUNT(id) as rate_delayed_over_5_minutes
       FROM flights
       GROUP BY 1
     ;;
   }
   dimension: carrier_id {hidden:yes}
   dimension: first_flight_time {view_label:"Carriers"}
+  dimension: carrier_rate_delayed_over_5_minutes {
+    label:"Flight Delay Rate [Carrier]"
+    description:"Percentage of selected flights for this carrier delayed (over 5 minutes)"
+
+  }
 }
 view: carrier_subtotals {
   label: "Carriers"
   derived_table: {
     sql:
-      SELECT carrier_id, SUM(dep_delay)/DATEDIFF(day,MIN(dep_time),MAX(dep_time)) as total_dep_delay
+      SELECT carrier_id, COUNT(CASE WHEN dep_delay > 5 END)/COUNT(id) as rate_delayed_over_5_minutes
       FROM flights
       WHERE {% condition flights.aircraft_id %}aircraft_id{% endcondition %}
         AND {% condition flights.arr_delay %}arr_delay{% endcondition %}
@@ -175,11 +182,19 @@ view: carrier_subtotals {
       GROUP BY 1
       HAVING
             {% condition flights.count %}COUNT(*){% endcondition %}
-            {% condition flights.average_dep_delay %}AVG(dep_delay){% endcondition %}
+        AND {% condition flights.delay_rate %}AVG(dep_delay){% endcondition %}
     ;;
   }
   dimension: carrier_id {hidden:yes}
-  dimension: total_dep_delay {label:"Total Daily Departure Delay"}
-  measure: average_carrier_daily_departure_delay {type:average sql:${total_dep_delay};; value_format:"#.00 h"}
+  dimension: rate_delayed_over_5_minutes {
+    label:"Flight Delay Rate [Selected]"
+    description:"Percentage of selected flights for this carrier delayed (over 5 minutes)"
+    value_format_name:percent_1
+  }
+  measure: average_carrier_delay_rate {
+    type:average
+    description:"Average over carriers of the rate of their selected flights that were delayed (over 5 minutes)"
+    sql:${rate_delayed_over_5_minutes};;
+    value_format_name:percent_1
+    }
 }
-

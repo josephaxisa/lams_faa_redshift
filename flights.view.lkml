@@ -102,11 +102,12 @@ view: flights {
   }
 
   measure: count {
-    type: count
+    type: number
+    sql: COUNT(${TABLE}.id) ;;
     drill_fields: [carriers.id, carriers.nickname, carriers.name, aircrafts.id, aircrafts.name]
   }
-  measure: average_dep_delay {
-    type: average
-    sql: ${dep_delay} ;;
+  measure: delay_rate {
+    type: number
+    sql: COUNT(CASE WHEN ${dep_delay}>5 THEN ${TABLE}.id END) / COUNT(${TABLE}.id) ;;
   }
 }
