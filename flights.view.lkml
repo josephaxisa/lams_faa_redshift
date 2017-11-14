@@ -105,4 +105,8 @@ view: flights {
     type: count
     drill_fields: [carriers.id, carriers.nickname, carriers.name, aircrafts.id, aircrafts.name]
   }
+  measure: average_dep_delay {
+    type: average
+    sql: ${dep_delay} ;;
+  }
 }

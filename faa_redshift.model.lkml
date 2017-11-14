@@ -36,7 +36,6 @@ explore: aircrafts {
   }
 }
 
-explore: carriers {}
 
 explore: flights {
   join: carriers {
@@ -57,3 +56,130 @@ explore: flights {
     relationship: many_to_one
   }
 }
+
+explore: parameter_view {}
+view: parameter_view {
+  sql_table_name: (SELECT 'a' as dim1, 'b' as dim2) ;;
+  parameter: selected_dimension {
+    type: unquoted
+    allowed_value: {value: "dim1" label: "Apples"}
+    allowed_value: {value: "dim2" label: "Oranges"}
+  }
+  dimension: dynamic_dimension {
+    sql: ${TABLE}.{% parameter parameter_view.selected_dimension %} ;;
+  }
+  dimension: selected_dimension_text {
+    sql:  'Measure by {% parameter parameter_view.selected_dimension %}' ;;
+  }
+}
+
+
+
+
+
+
+
+
+explore: carriers {
+  view_label: "[Carriers]"
+
+  join: carrier_joinpaths {
+    relationship: one_to_one
+    sql_on: 0=1
+    {% if carriers._in_query %} OR ${carrier_joinpaths.path} = 'carrier' {%endif%}
+    {% if accidents._in_query %} OR ${carrier_joinpaths.path} = 'accidents' {%endif%}
+    {% if flights._in_query %} OR ${carrier_joinpaths.path} = 'flights' {%endif%}
+    ;;
+  }
+  join: accidents {
+    relationship: one_to_one
+    sql_on: ${carrier_joinpaths.path} = 'accidents'
+      AND ${accidents.air_carrier} = ${carriers.id};;
+  }
+  join: flights {
+    relationship: one_to_one
+    sql_on: ${carrier_joinpaths.path} = 'flights'
+      AND ${flights.carrier_id} = ${carriers.id};;
+  }
+  join: carrier_summaries {
+    relationship: one_to_one
+    view_label: "[Carriers]"
+    sql_on: ${carrier_joinpaths.path} = 'carrier'
+      AND ${carrier_summaries.carrier_id} = ${carriers.id};;
+  }
+  join: carrier_subtotals {
+    relationship: one_to_one
+    view_label: "[Carriers]"
+    sql_on: ${carrier_joinpaths.path} = 'carrier'
+      AND ${carrier_subtotals.carrier_id} = ${carriers.id};;
+  }
+}
+
+view: carrier_joinpaths {
+  derived_table:{
+    sql:
+      SELECT 'carrier' as path
+      UNION ALL
+      SELECT 'accidents' as path
+      UNION ALL
+      SELECT 'flights' as path
+    ;;
+  }
+  dimension: path {hidden:yes}
+}
+
+view: carrier_summaries {
+  label: "Carriers"
+  derived_table: {
+    #persist it!
+    sql:
+      SELECT carrier_id, MIN(dep_time) as first_flight_time
+      FROM flights
+      GROUP BY 1
+    ;;
+  }
+  dimension: carrier_id {hidden:yes}
+  dimension: first_flight_time {view_label:"Carriers"}
+}
+view: carrier_subtotals {
+  label: "Carriers"
+  derived_table: {
+    sql:
+      SELECT carrier_id, SUM(dep_delay)/DATEDIFF(day,MIN(dep_time),MAX(dep_time)) as total_dep_delay
+      FROM flights
+      WHERE {% condition flights.aircraft_id %}aircraft_id{% endcondition %}
+        AND {% condition flights.arr_delay %}arr_delay{% endcondition %}
+        AND {% condition flights.arr_time %}arr_time{% endcondition %}
+        AND {% condition flights.arr_date %}arr_time{% endcondition %}
+        AND {% condition flights.arr_week %}arr_time{% endcondition %}
+        AND {% condition flights.arr_month %}arr_time{% endcondition %}
+        AND {% condition flights.arr_quarter %}arr_time{% endcondition %}
+        AND {% condition flights.arr_year %}arr_time{% endcondition %}
+        AND {% condition flights.cancelled %}cancelled{% endcondition %}
+        AND {% condition flights.carrier_id %}carrier_id{% endcondition %}
+        AND {% condition flights.dep_delay %}dep_delay{% endcondition %}
+        AND {% condition flights.dep_time %}dep_time{% endcondition %}
+        AND {% condition flights.dep_date %}dep_time{% endcondition %}
+        AND {% condition flights.dep_week %}dep_time{% endcondition %}
+        AND {% condition flights.dep_month %}dep_time{% endcondition %}
+        AND {% condition flights.dep_quarter %}dep_time{% endcondition %}
+        AND {% condition flights.dep_year %}dep_time{% endcondition %}
+        AND {% condition flights.destination %}destination{% endcondition %}
+        AND {% condition flights.distance %}distance{% endcondition %}
+        AND {% condition flights.diverted %}diverted{% endcondition %}
+        AND {% condition flights.flight_num %}flight_num{% endcondition %}
+        AND {% condition flights.flight_time %}flight_time{% endcondition %}
+        AND {% condition flights.id2 %}id2{% endcondition %}
+        AND {% condition flights.origin %}origin{% endcondition %}
+        AND {% condition flights.taxi_in %}taxi_out{% endcondition %}
+      GROUP BY 1
+      HAVING
+            {% condition flights.count %}COUNT(*){% endcondition %}
+            {% condition flights.average_dep_delay %}AVG(dep_delay){% endcondition %}
+    ;;
+  }
+  dimension: carrier_id {hidden:yes}
+  dimension: total_dep_delay {label:"Total Daily Departure Delay"}
+  measure: average_carrier_daily_departure_delay {type:average sql:${total_dep_delay};; value_format:"#.00 h"}
+}
+
