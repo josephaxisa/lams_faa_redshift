@@ -94,7 +94,7 @@ explore: carriers {
   join: accidents {
     relationship: one_to_one
     sql_on: ${carrier_joinpaths.path} = 'accidents'
-      AND ${accidents.air_carrier} = ${carriers.id};;
+      AND ${accidents.air_carrier} = ${carriers.name}::varchar;;
   }
   join: flights {
     relationship: one_to_one
@@ -135,15 +135,15 @@ view: carrier_summaries {
     sql:
       SELECT  carrier_id,
               MIN(dep_time) as first_flight_time,
-              COUNT(CASE WHEN dep_delay > 5 END)/COUNT(id) as rate_delayed_over_5_minutes
+              1.0*COUNT(CASE WHEN dep_delay > 5 THEN id2 END)/NULLIF(COUNT(id2),0) as rate_delayed_over_5_minutes
       FROM flights
       GROUP BY 1
     ;;
   }
   dimension: carrier_id {hidden:yes}
   dimension: first_flight_time {view_label:"Carriers"}
-  dimension: carrier_rate_delayed_over_5_minutes {
-    label:"Flight Delay Rate [All flights]"
+  dimension: rate_delayed_over_5_minutes {
+    label:"Flight Delay Rate (All flights)"
     description:"Percentage of selected flights for this carrier delayed (over 5 minutes)"
 
   }
@@ -152,7 +152,9 @@ view: carrier_subtotals {
   label: "Carriers"
   derived_table: {
     sql:
-      SELECT carrier_id, COUNT(CASE WHEN dep_delay > 5 END)/COUNT(id) as rate_delayed_over_5_minutes
+      SELECT
+        carrier_id,
+        1.0*COUNT(CASE WHEN dep_delay > 5 THEN id2 END)/NULLIF(COUNT(id2),0) as rate_delayed_over_5_minutes
       FROM flights
       WHERE {% condition flights.aircraft_id %}aircraft_id{% endcondition %}
         AND {% condition flights.arr_delay %}arr_delay{% endcondition %}
@@ -181,21 +183,52 @@ view: carrier_subtotals {
         AND {% condition flights.taxi_in %}taxi_out{% endcondition %}
       GROUP BY 1
       HAVING
-            {% condition flights.count %}COUNT(*){% endcondition %}
+            {% condition flights.count %}COUNT(id2){% endcondition %}
         AND {% condition flights.delay_rate %}AVG(dep_delay){% endcondition %}
     ;;
   }
   dimension: carrier_id {hidden:yes}
+
   dimension: rate_delayed_over_5_minutes {
-    label:"Flight Delay Rate [Selected]"
+    hidden: yes
+    label:"Flight Delay Rate (filtered)"
     description:"Percentage of selected flights for this carrier delayed (over 5 minutes)"
     value_format_name:percent_1
   }
-  measure: average_carrier_delay_rate {
-    label:"Average Flight Delay Rate [Selected]"
+
+  measure: one_rate_delayed_over_5_minutes {
+    group_label:"Flight Delay Rate (filtered)"
+    label: "- | Flight Delay Rate (filtered)"
+    description:"Percentage of selected flights for this carrier delayed (over 5 minutes)"
+    value_format_name: percent_1
+    type: number
+    sql: CASE COUNT(${rate_delayed_over_5_minutes})
+         WHEN 1 THEN MIN(${rate_delayed_over_5_minutes})
+         END
+      ;;
+  }
+  measure: avg_rate_delayed_over_5_minutes {
+    group_label:"Flight Delay Rate (filtered)"
+    label:"Avg | Flight Delay Rate (filtered)"
     type:average
     description:"Average over carriers of the rate of their selected flights that were delayed (over 5 minutes)"
     sql:${rate_delayed_over_5_minutes};;
     value_format_name:percent_1
     }
+  measure: min_rate_delayed_over_5_minutes {
+    group_label:"Flight Delay Rate (filtered)"
+    label:"Min | Flight Delay Rate (filtered)"
+    type:min
+    description:"Average over carriers of the rate of their selected flights that were delayed (over 5 minutes)"
+    sql:${rate_delayed_over_5_minutes};;
+    value_format_name:percent_1
+  }
+  measure: max_rate_delayed_over_5_minutes {
+    group_label:"Flight Delay Rate (filtered)"
+    label:"Max | Flight Delay Rate (filtered)"
+    type:max
+    description:"Average over carriers of the rate of their selected flights that were delayed (over 5 minutes)"
+    sql:${rate_delayed_over_5_minutes};;
+    value_format_name:percent_1
+  }
 }

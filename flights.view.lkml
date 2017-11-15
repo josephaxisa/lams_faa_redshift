@@ -103,11 +103,12 @@ view: flights {
 
   measure: count {
     type: number
-    sql: COUNT(${TABLE}.id) ;;
+    sql: NULLIF(COUNT(${TABLE}.id2),0) ;;
     drill_fields: [carriers.id, carriers.nickname, carriers.name, aircrafts.id, aircrafts.name]
   }
   measure: delay_rate {
     type: number
-    sql: COUNT(CASE WHEN ${dep_delay}>5 THEN ${TABLE}.id END) / COUNT(${TABLE}.id) ;;
+    value_format_name: percent_1
+    sql: 1.0*COUNT(CASE WHEN ${dep_delay}>5 THEN ${TABLE}.id2 END) / NULLIF(COUNT(${TABLE}.id2),0) ;;
   }
 }

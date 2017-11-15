@@ -15,7 +15,8 @@ view: accidents {
 
   measure: dynamic_measure {
     label_from_parameter: param_dynamic_measure
-    sql:
+    type: sum
+    sql: -- Param value: {{accidents.chosen_dynamic_measure._sql}}
          {% if chosen_dynamic_measure._sql == "d" %} ${number_of_fatalities}
          {% elsif chosen_dynamic_measure._sql == "da" %} ${number_of_fatalities} + ${number_of_serious_injuries}
          {% elsif chosen_dynamic_measure._sql == "dai" %} ${number_of_fatalities} + ${number_of_serious_injuries} + ${number_of_minor_injuries}
@@ -214,7 +215,7 @@ view: accidents {
 
   measure: count {
     type: number
-    sql: COUNT(${TABLE}.id) ;;
+    sql: NULLIF(COUNT(${TABLE}.id),0);;
     drill_fields: [id, airport_name, aircrafts.id, aircrafts.name]
   }
 }

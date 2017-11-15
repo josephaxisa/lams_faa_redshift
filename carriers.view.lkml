@@ -19,7 +19,7 @@ view: carriers {
 
   measure: count {
     type: number
-    sql: COUNT(${TABLE}.id) ;;
+    sql: NULLIF(COUNT(${TABLE}.id),0) ;;
     drill_fields: [id, nickname, name, flights.count]
   }
 }
