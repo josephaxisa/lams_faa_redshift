@@ -12,13 +12,13 @@ view: carrier_facts {
 
 datagroup: create_view {
 #   sql_trigger: select count(*) from ${flights_agg.SQL_TABLE_NAME} ;;
-sql_trigger: CREATE OR REPLACE VIEW flights_agg AS select * from ${flights_agg.SQL_TABLE_NAME} WITH NO SCHEMA BINDING ;;
+sql_trigger: CREATE OR REPLACE VIEW flights_agg AS select * from ${carrier_facts.SQL_TABLE_NAME} WITH NO SCHEMA BINDING ;;
 }
 
 view: flights_view_creation {
   derived_table: {
     sql: SELECT GETDATE();
-        CREATE VIEW flights_agg AS select * from ${flights_agg.SQL_TABLE_NAME} WITH NO SCHEMA BINDING;
+        CREATE VIEW flights_agg AS select * from ${carrier_facts.SQL_TABLE_NAME} WITH NO SCHEMA BINDING;
         ;;
     datagroup_trigger: create_view
   }
