@@ -6,6 +6,8 @@ include: "*.view"
 # include all the dashboards
 include: "*.dashboard"
 
+explore: carrier_facts {}
+
 explore: accidents {
   join: aircrafts {
     type: left_outer
@@ -34,6 +36,9 @@ explore: aircrafts {
     sql_on: ${aircrafts.aircraft_model_id} = ${aircraft_models.id} ;;
     relationship: many_to_one
   }
+  join: accidents {
+    sql: 1=1 ;;
+  }
 }
 
 explore: carriers {}
@@ -43,6 +48,9 @@ explore: flights {
     type: left_outer
     sql_on: ${flights.carrier_id} = ${carriers.id} ;;
     relationship: many_to_one
+  }
+  join: accidents {
+    sql: 1=1 ;;
   }
 
   join: aircrafts {
