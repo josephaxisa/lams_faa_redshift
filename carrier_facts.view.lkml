@@ -10,9 +10,9 @@ view: carrier_facts {
   }
 }
 
-datagroup: create_view {
+datagroup: trigger_test {
 #   sql_trigger: select count(*) from ${flights_agg.SQL_TABLE_NAME} ;;
-sql_trigger: CREATE OR REPLACE VIEW flights_agg AS select * from ${carrier_facts.SQL_TABLE_NAME} WITH NO SCHEMA BINDING ;;
+sql_trigger: select count(*) from ${carrier_facts.SQL_TABLE_NAME}  ;;
 }
 
 view: flights_view_creation {
