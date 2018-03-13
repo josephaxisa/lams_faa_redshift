@@ -24,6 +24,7 @@ explore: accidents {
     AND accidents.id = CAST(
           RTRIM(SPLIT_PART({% parameter accidents.accident_lookup %},  '<id ', 2),'>')
         as int)
+
     {% endif %}
   ;;
 }
