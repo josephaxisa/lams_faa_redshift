@@ -22,7 +22,7 @@ explore: accidents {
   sql_always_where: 1=1
     {% if accidents.accident_lookup._is_filtered %}
     AND accidents.id = CAST(
-          RTRIM(SPLIT_PART({% parameter accidents.accident_lookup %},  '<id ', 2),'>')
+          LTRIM(SPLIT_PART({% parameter accidents.accident_lookup %},  '<id ', 2),'>')
         as int)
     {% endif %}
   ;;
