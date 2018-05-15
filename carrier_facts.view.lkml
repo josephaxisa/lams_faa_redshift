@@ -2,6 +2,8 @@ view: carrier_facts {
   derived_table: {
     sql: select carrier_id, sum(flight_time) as total_flight_time from faa.flights group by 1;;
     persist_for: "5 hours"
+    distribution: "carrier_id"
+    sortkeys: ["carrier_id"]
   }
   dimension: carrier_id {}
   measure: total_flight_time {

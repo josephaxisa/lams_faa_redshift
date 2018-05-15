@@ -2,17 +2,20 @@ view: carriers {
   sql_table_name: faa.carriers ;;
 
   dimension: id {
+    label: "[ID]"
     primary_key: yes
     type: string
     sql: ${TABLE}.id ;;
   }
 
   dimension: name {
+    label: "[Name]"
     type: string
     sql: ${TABLE}.name ;;
   }
 
   dimension: nickname {
+    label: "[Short Name]"
     type: string
     sql: ${TABLE}.nickname ;;
   }
