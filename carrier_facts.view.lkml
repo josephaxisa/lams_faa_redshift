@@ -1,3 +1,4 @@
+
 view: carrier_facts {
   derived_table: {
     sql: select carrier_id, sum(flight_time) as total_flight_time from faa.flights group by 1;;
@@ -12,10 +13,6 @@ view: carrier_facts {
   }
 }
 
-datagroup: trigger_test {
-#   sql_trigger: select count(*) from ${flights_agg.SQL_TABLE_NAME} ;;
-sql_trigger: select count(*) from ${carrier_facts.SQL_TABLE_NAME}  ;;
-}
 
 view: flights_view_creation {
   derived_table: {

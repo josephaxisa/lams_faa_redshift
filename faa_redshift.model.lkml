@@ -47,9 +47,10 @@ explore: aircrafts {
 explore: flights {
   join: carriers {
     type: left_outer
-    sql_on: ${flights.carrier_id} = ${carriers.id} ;;
     relationship: many_to_one
   }
+
+
   join: accidents {
     sql: 1=1 ;;
     relationship: one_to_one
