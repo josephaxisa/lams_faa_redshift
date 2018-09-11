@@ -1,6 +1,10 @@
 view: flights {
   sql_table_name: faa.flights ;;
 
+  dimension: pk0_flights {
+    sql:  NULL ;;
+  }
+
   dimension: aircraft_id {
     type: string
     # hidden: yes

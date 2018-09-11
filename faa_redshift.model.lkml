@@ -4,8 +4,6 @@ connection: "faa_redshift"
 include: "*.view"
 include: "one_to_many_example.explore.lkml"
 
-# include all the dashboards
-include: "*.dashboard"
 
 explore: carrier_facts {}
 
@@ -48,13 +46,9 @@ explore: flights {
   join: carriers {
     type: left_outer
     relationship: many_to_one
+    sql_on: ${carriers.1pk_carrier_id} = ${flights.carrier_id} ;;
   }
 
-
-  join: accidents {
-    sql: 1=1 ;;
-    relationship: one_to_one
-  }
 
   join: aircrafts {
     type: left_outer
@@ -66,21 +60,5 @@ explore: flights {
     type: left_outer
     sql_on: ${aircrafts.aircraft_model_id} = ${aircraft_models.id} ;;
     relationship: many_to_one
-  }
-}
-
-explore: parameter_view {}
-view: parameter_view {
-  sql_table_name: (SELECT 'a' as dim1, 'b' as dim2) ;;
-  parameter: selected_dimension {
-    type: unquoted
-    allowed_value: {value: "dim1" label: "Apples"}
-    allowed_value: {value: "dim2" label: "Oranges"}
-  }
-  dimension: dynamic_dimension {
-    sql: ${TABLE}.{% parameter parameter_view.selected_dimension %} ;;
-  }
-  dimension: selected_dimension_text {
-    sql:  'Measure by {% parameter parameter_view.selected_dimension %}' ;;
   }
 }
