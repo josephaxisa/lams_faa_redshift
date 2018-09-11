@@ -1,5 +1,5 @@
 ---
-title: Issue Report 11⛔ 0⚠️
+title: Issue Report 7⛔ 6⚠️
 navigation: true
 ---
 
@@ -10,7 +10,7 @@ navigation: true
 <summary style="margin-left:-2em;border-bottom:solid 1px #333;">
 <div style="display:inline-flex;width:90%;justify-content:space-between">
 <b>Issues</b>
-<span class="summary">Errors: 11</span>
+<span class="summary">Errors: 7</span>
 <span class="summary">Warnings: 0</span>
 </div></summary>
 
@@ -18,7 +18,7 @@ navigation: true
 <summary style="margin-left:-2em;border-bottom:solid 1px #333;">
 <div style="display:inline-flex;width:90%;justify-content:space-between">
 <b>K1</b>
-<span class="summary">Errors: 11</span>
+<span class="summary">Errors: 6</span>
 <span class="summary">Warnings: 0</span>
 </div></summary>
 
@@ -30,31 +30,11 @@ navigation: true
 <tbody>
 <tr>
 <td>error</td>
-<td>No Primary Key Dimensions found in carriers <a href="/projects/faa_redshift/files/carriers.view.lkml#view:carriers" style="text-decoration: none">⧉</a></td>
-</tr>
-<tr>
-<td>error</td>
-<td>No Primary Key Dimensions found in accidents <a href="/projects/faa_redshift/files/accidents.view.lkml#view:accidents" style="text-decoration: none">⧉</a></td>
-</tr>
-<tr>
-<td>error</td>
-<td>No Primary Key Dimensions found in aircrafts <a href="/projects/faa_redshift/files/aircrafts.view.lkml#view:aircrafts" style="text-decoration: none">⧉</a></td>
-</tr>
-<tr>
-<td>error</td>
 <td>No Primary Key Dimensions found in carrier_facts <a href="/projects/faa_redshift/files/carrier_facts.view.lkml#view:carrier_facts" style="text-decoration: none">⧉</a></td>
 </tr>
 <tr>
 <td>error</td>
 <td>No Primary Key Dimensions found in flights_view_creation <a href="/projects/faa_redshift/files/carrier_facts.view.lkml#view:flights_view_creation" style="text-decoration: none">⧉</a></td>
-</tr>
-<tr>
-<td>error</td>
-<td>No Primary Key Dimensions found in aircraft_models <a href="/projects/faa_redshift/files/aircraft_models.view.lkml#view:aircraft_models" style="text-decoration: none">⧉</a></td>
-</tr>
-<tr>
-<td>error</td>
-<td>No Primary Key Dimensions found in flights <a href="/projects/faa_redshift/files/flights.view.lkml#view:flights" style="text-decoration: none">⧉</a></td>
 </tr>
 <tr>
 <td>error</td>
@@ -71,6 +51,28 @@ navigation: true
 <tr>
 <td>error</td>
 <td>No Primary Key Dimensions found in combined_date <a href="/projects/faa_redshift/files/one_to_many_example.explore.lkml#view:combined_date" style="text-decoration: none">⧉</a></td>
+</tr>
+</tbody>
+</table>
+
+</details>
+<details style='margin-left: 4em' open>
+<summary style="margin-left:-2em;border-bottom:solid 1px #333;">
+<div style="display:inline-flex;width:90%;justify-content:space-between">
+<b>K2</b>
+<span class="summary">Errors: 1</span>
+<span class="summary">Warnings: 0</span>
+</div></summary>
+
+<table style="border:solid 1px #ccc">
+<thead style="background-color:darkblue;color:white"><tr>
+<th>Level</td>
+<th>Description</td>
+</tr></thead>
+<tbody>
+<tr>
+<td>error</td>
+<td>View flights has 1 Primary Key Dimension(s) but their names declare 0 columns <a href="/projects/faa_redshift/files/flights.view.lkml#view:flights" style="text-decoration: none">⧉</a></td>
 </tr>
 </tbody>
 </table>
