@@ -1,4 +1,3 @@
-
 ---
 title: Developer Index
 navigation: true
@@ -81,35 +80,6 @@ navigation: true
 <details style="margin-left: 2em" open>
 <summary style="margin-left:-2em;border-bottom:solid 1px #333;">
 <div style="display:inline-flex;width:90%;justify-content:space-between">
-<b>flight_date</b>
-</div>
-</summary>
-
-<table style="border:solid 1px #ccc">
-<thead style="background-color:darkblue;color:white"><tr>
-<th>View</td>
-<th>All PKs</th>
-<th>Description</th>
-</tr></thead>
-<tbody>
-
-<tr>
-<td>carrier_day_rollup <a href="&#47;projects&#47;faa_redshift&#47;files&#47;carrier_day_rollup.view.lkml#view:carrier_day_rollup" style="text-decoration: none">⧉</a></td>
-<td>flight_date, carrier_id</td>
-<td></td>
-</tr>
-
-</tbody>
-</table>
-
-
-</details>
-
-
-
-<details style="margin-left: 2em" open>
-<summary style="margin-left:-2em;border-bottom:solid 1px #333;">
-<div style="display:inline-flex;width:90%;justify-content:space-between">
 <b>carrier_id</b>
 </div>
 </summary>
@@ -131,6 +101,35 @@ navigation: true
 <tr>
 <td>carriers <a href="&#47;projects&#47;faa_redshift&#47;files&#47;carriers.view.lkml#view:carriers" style="text-decoration: none">⧉</a></td>
 <td>carrier_id</td>
+<td></td>
+</tr>
+
+</tbody>
+</table>
+
+
+</details>
+
+
+
+<details style="margin-left: 2em" open>
+<summary style="margin-left:-2em;border-bottom:solid 1px #333;">
+<div style="display:inline-flex;width:90%;justify-content:space-between">
+<b>flight_date</b>
+</div>
+</summary>
+
+<table style="border:solid 1px #ccc">
+<thead style="background-color:darkblue;color:white"><tr>
+<th>View</td>
+<th>All PKs</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+
+<tr>
+<td>carrier_day_rollup <a href="&#47;projects&#47;faa_redshift&#47;files&#47;carrier_day_rollup.view.lkml#view:carrier_day_rollup" style="text-decoration: none">⧉</a></td>
+<td>flight_date, carrier_id</td>
 <td></td>
 </tr>
 
