@@ -1,8 +1,14 @@
 view: aircrafts {
   sql_table_name: faa.aircrafts ;;
 
-  dimension: id {
+  dimension: pk1_aircraft_id {
     primary_key: yes
+    hidden: yes
+    type: string
+    sql: ${TABLE}.id ;;
+  }
+
+  dimension: id {
     type: string
     sql: ${TABLE}.id ;;
   }

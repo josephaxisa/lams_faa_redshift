@@ -1,6 +1,10 @@
 view: flights {
   sql_table_name: faa.flights ;;
 
+  dimension: pk0_flights {
+    sql:  NULL ;;
+  }
+
   dimension: aircraft_id {
     type: string
     # hidden: yes
@@ -102,7 +106,13 @@ view: flights {
   }
 
   measure: count {
-    type: count
+    type: number
+    sql: NULLIF(COUNT(${TABLE}.id2),0) ;;
     drill_fields: [carriers.id, carriers.nickname, carriers.name, aircrafts.id, aircrafts.name]
+  }
+  measure: delay_rate {
+    type: number
+    value_format_name: percent_1
+    sql: 1.0*COUNT(CASE WHEN ${dep_delay}>5 THEN ${TABLE}.id2 END) / NULLIF(COUNT(${TABLE}.id2),0) ;;
   }
 }
