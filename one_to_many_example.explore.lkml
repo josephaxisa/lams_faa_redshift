@@ -200,7 +200,7 @@ view: combined_date {
   }
   dimension_group: date_parts {
     group_label: "Date parts"
-    label: ""
+    label: "test"
     type: time
     timeframes: [month_name,quarter_of_year,week_of_year,day_of_month,day_of_week,hour_of_day]
     datatype: datetime
