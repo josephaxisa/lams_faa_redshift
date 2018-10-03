@@ -1,9 +1,12 @@
 view: carriers {
   sql_table_name: faa.carriers ;;
-
+  dimension: 1pk_carrier_id {
+    hidden: yes
+    primary_key: yes
+    sql:${id};;
+  }
   dimension: id {
     label: "[ID]"
-    primary_key: yes
     type: string
     sql: ${TABLE}.id ;;
   }

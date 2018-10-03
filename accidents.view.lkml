@@ -32,8 +32,14 @@ view: accidents {
     suggest_dimension: accident_lookup_dim
   }
 
-  dimension: id {
+  dimension: pk1_accident_id {
     primary_key: yes
+    hidden: yes
+    type: number
+    sql: ${TABLE}.id ;;
+  }
+
+  dimension: id {
     type: number
     sql: ${TABLE}.id ;;
   }
