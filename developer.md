@@ -29,7 +29,7 @@ navigation: true
 <tbody>
 
 <tr>
-<td>accidents <a href="&#47;projects&#47;faa_redshift&#47;files&#47;accidents.view.lkml#view:accidents" style="text-decoration: none">⧉</a></td>
+<td>accidents <a href="&#47;projects&#47;look-at-me-sideways&#47;files&#47;accidents.view.lkml#view:accidents" style="text-decoration: none">⧉</a></td>
 <td>accident_id</td>
 <td></td>
 </tr>
@@ -58,13 +58,13 @@ navigation: true
 <tbody>
 
 <tr>
-<td>aircraft_models <a href="&#47;projects&#47;faa_redshift&#47;files&#47;aircraft_models.view.lkml#view:aircraft_models" style="text-decoration: none">⧉</a></td>
+<td>aircraft_models <a href="&#47;projects&#47;look-at-me-sideways&#47;files&#47;aircraft_models.view.lkml#view:aircraft_models" style="text-decoration: none">⧉</a></td>
 <td>aircraft_id</td>
 <td></td>
 </tr>
 
 <tr>
-<td>aircrafts <a href="&#47;projects&#47;faa_redshift&#47;files&#47;aircrafts.view.lkml#view:aircrafts" style="text-decoration: none">⧉</a></td>
+<td>aircrafts <a href="&#47;projects&#47;look-at-me-sideways&#47;files&#47;aircrafts.view.lkml#view:aircrafts" style="text-decoration: none">⧉</a></td>
 <td>aircraft_id</td>
 <td></td>
 </tr>
@@ -93,13 +93,13 @@ navigation: true
 <tbody>
 
 <tr>
-<td>carrier_day_rollup <a href="&#47;projects&#47;faa_redshift&#47;files&#47;carrier_day_rollup.view.lkml#view:carrier_day_rollup" style="text-decoration: none">⧉</a></td>
+<td>carrier_day_rollup <a href="&#47;projects&#47;look-at-me-sideways&#47;files&#47;carrier_day_rollup.view.lkml#view:carrier_day_rollup" style="text-decoration: none">⧉</a></td>
 <td>flight_date, carrier_id</td>
 <td></td>
 </tr>
 
 <tr>
-<td>carriers <a href="&#47;projects&#47;faa_redshift&#47;files&#47;carriers.view.lkml#view:carriers" style="text-decoration: none">⧉</a></td>
+<td>carriers <a href="&#47;projects&#47;look-at-me-sideways&#47;files&#47;carriers.view.lkml#view:carriers" style="text-decoration: none">⧉</a></td>
 <td>carrier_id</td>
 <td></td>
 </tr>
@@ -128,7 +128,7 @@ navigation: true
 <tbody>
 
 <tr>
-<td>carrier_day_rollup <a href="&#47;projects&#47;faa_redshift&#47;files&#47;carrier_day_rollup.view.lkml#view:carrier_day_rollup" style="text-decoration: none">⧉</a></td>
+<td>carrier_day_rollup <a href="&#47;projects&#47;look-at-me-sideways&#47;files&#47;carrier_day_rollup.view.lkml#view:carrier_day_rollup" style="text-decoration: none">⧉</a></td>
 <td>flight_date, carrier_id</td>
 <td></td>
 </tr>
