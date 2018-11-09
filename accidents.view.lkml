@@ -1,6 +1,13 @@
 view: accidents {
   sql_table_name: faa.accidents ;;
 
+  dimension: pk1_accident_id {
+    primary_key: yes
+    hidden: yes
+    type: number
+    sql: ${TABLE}.id ;;
+  }
+
   parameter: param_dynamic_measure {
     type: unquoted
     allowed_value: {value: "d" label:"Deaths"}
@@ -30,13 +37,6 @@ view: accidents {
   }
   parameter: accident_lookup {
     suggest_dimension: accident_lookup_dim
-  }
-
-  dimension: pk1_accident_id {
-    primary_key: yes
-    hidden: yes
-    type: number
-    sql: ${TABLE}.id ;;
   }
 
   dimension: id {
