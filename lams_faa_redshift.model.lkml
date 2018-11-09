@@ -52,7 +52,7 @@ explore: flights {
 
   join: aircrafts {
     type: left_outer
-    sql_on: ${flights.aircraft_id} = ${aircrafts.id} ;;
+    sql_on: ${flights.1pk_aircraft_id} = ${aircrafts.id} ;;
     relationship: many_to_one
   }
 

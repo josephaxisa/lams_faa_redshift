@@ -6,7 +6,7 @@ view: carrier_facts {
     distribution: "carrier_id"
     sortkeys: ["carrier_id"]
   }
-  dimension: carrier_id { primary_key: yes }
+  dimension: 1pk_carrier_id { primary_key: yes }
   measure: total_flight_time {
     type: sum
     sql: ${TABLE}.total_flight_time ;;
