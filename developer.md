@@ -7,16 +7,16 @@ navigation: true
 <details style="margin-left: 0em" open>
 <summary style="margin-left:-2em;border-bottom:solid 1px #333;">
 <div style="display:inline-flex;width:90%;justify-content:space-between">
-<b>Views by Primary Key</b>
+<b>Views by Primary Key </b>
 </div>
 </summary>
 
 
 
-<details style="margin-left: 2em" open>
+<details style="margin-left: 2em" >
 <summary style="margin-left:-2em;border-bottom:solid 1px #333;">
 <div style="display:inline-flex;width:90%;justify-content:space-between">
-<b>accident_id</b>
+<b>accident_id (1)</b>
 </div>
 </summary>
 
@@ -42,10 +42,10 @@ navigation: true
 
 
 
-<details style="margin-left: 2em" open>
+<details style="margin-left: 2em" >
 <summary style="margin-left:-2em;border-bottom:solid 1px #333;">
 <div style="display:inline-flex;width:90%;justify-content:space-between">
-<b>aircraft_id</b>
+<b>aircraft_id (3)</b>
 </div>
 </summary>
 
@@ -69,6 +69,12 @@ navigation: true
 <td></td>
 </tr>
 
+<tr>
+<td>flights <a href="&#47;projects&#47;look-at-me-sideways&#47;files&#47;flights.view.lkml#view:flights" style="text-decoration: none">⧉</a></td>
+<td>aircraft_id</td>
+<td></td>
+</tr>
+
 </tbody>
 </table>
 
@@ -77,10 +83,10 @@ navigation: true
 
 
 
-<details style="margin-left: 2em" open>
+<details style="margin-left: 2em" >
 <summary style="margin-left:-2em;border-bottom:solid 1px #333;">
 <div style="display:inline-flex;width:90%;justify-content:space-between">
-<b>carrier_id</b>
+<b>carrier_id (3)</b>
 </div>
 </summary>
 
@@ -99,6 +105,12 @@ navigation: true
 </tr>
 
 <tr>
+<td>carrier_facts <a href="&#47;projects&#47;look-at-me-sideways&#47;files&#47;carrier_facts.view.lkml#view:carrier_facts" style="text-decoration: none">⧉</a></td>
+<td>carrier_id</td>
+<td></td>
+</tr>
+
+<tr>
 <td>carriers <a href="&#47;projects&#47;look-at-me-sideways&#47;files&#47;carriers.view.lkml#view:carriers" style="text-decoration: none">⧉</a></td>
 <td>carrier_id</td>
 <td></td>
@@ -112,10 +124,10 @@ navigation: true
 
 
 
-<details style="margin-left: 2em" open>
+<details style="margin-left: 2em" >
 <summary style="margin-left:-2em;border-bottom:solid 1px #333;">
 <div style="display:inline-flex;width:90%;justify-content:space-between">
-<b>flight_date</b>
+<b>flight_date (1)</b>
 </div>
 </summary>
 
