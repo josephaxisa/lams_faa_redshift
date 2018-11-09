@@ -39,7 +39,7 @@ view: carrier_day_rollup {
       sql_step: CREATE TABLE ${SQL_TABLE_NAME}_prior AS SELECT * FROM ${SQL_TABLE_NAME} ;;
     }
   }
-  dimension: pk2_flight_date { hidden:  yes}
+  dimension: pk2_flight_date { hidden: yes}
   dimension: pk2_carrier_id {hidden: yes}
   dimension: count_flights {}
 }
