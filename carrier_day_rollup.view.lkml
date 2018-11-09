@@ -40,7 +40,7 @@ view: carrier_day_rollup {
     }
   }
   dimension: pk2_flight_date { hidden: yes}
-  dimension: pk2_carrier_id {hidden: yes}
+  dimension: pk2_carrier_id {hidden: no}
   dimension: count_flights {}
 }
 datagroup: flights_etl {
