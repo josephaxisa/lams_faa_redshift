@@ -4,6 +4,8 @@ connection: "faa_redshift"
 include: "*.view"
 include: "one_to_many_example.explore.lkml"
 
+# LAMS
+# rule_exemptions: {E2: "don't want to join on pks"}
 
 explore: carrier_facts {}
 
