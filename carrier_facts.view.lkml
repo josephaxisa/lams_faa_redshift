@@ -20,5 +20,7 @@ view: flights_view_creation {
         CREATE VIEW flights_agg AS select * from ${carrier_facts.SQL_TABLE_NAME} WITH NO SCHEMA BINDING;
         ;;
     datagroup_trigger: create_view
+    # LAMS
+    # rule_exemptions: {K1: "No pks needed here"}
   }
 }
