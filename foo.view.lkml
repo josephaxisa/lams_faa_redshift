@@ -2,7 +2,6 @@ view: foo {
   # LAMS
   # rule_exemptions: {
   #   T1: "foo"
-  #   K1: "bar"
   # }
   derived_table: {
     sql: SELECT
