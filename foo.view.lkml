@@ -3,6 +3,7 @@ view: foo {
   # rule_exemptions: {
   #   T1: "foo"
   # }
+  #
   derived_table: {
     sql: SELECT
         user_id as user_id
