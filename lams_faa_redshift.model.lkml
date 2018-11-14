@@ -2,7 +2,6 @@ connection: "faa_redshift"
 
 # include all the views
 include: "*.view"
-include: "one_to_many_example.explore.lkml"
 
 explore: carrier_facts {}
 
