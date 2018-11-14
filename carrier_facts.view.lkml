@@ -21,8 +21,4 @@ view: flights_view_creation {
         ;;
     datagroup_trigger: create_view
   }
-  # LAMS
-  # rule_exemptions: {
-  #   K1: "No pks needed here"
-  # }
 }
