@@ -45,7 +45,7 @@ navigation: true
 <details style="margin-left: 2em" >
 <summary style="margin-left:-2em;border-bottom:solid 1px #333;">
 <div style="display:inline-flex;width:90%;justify-content:space-between">
-<b>aircraft_id (3)</b>
+<b>aircraft_id (2)</b>
 </div>
 </summary>
 
@@ -56,12 +56,6 @@ navigation: true
 <th>Description</th>
 </tr></thead>
 <tbody>
-
-<tr>
-<td>aircraft_models <a href="&#47;projects&#47;lams_faa_redshift&#47;files&#47;aircraft_models.view.lkml#view:aircraft_models" style="text-decoration: none">⧉</a></td>
-<td>aircraft_id</td>
-<td></td>
-</tr>
 
 <tr>
 <td>aircrafts <a href="&#47;projects&#47;lams_faa_redshift&#47;files&#47;aircrafts.view.lkml#view:aircrafts" style="text-decoration: none">⧉</a></td>
