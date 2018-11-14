@@ -8,6 +8,7 @@ include: "one_to_many_example.explore.lkml"
 explore: carrier_facts {}
 
 explore: accidents {
+  description: "Anything accidents related can be found here"
   join: aircrafts {
     type: left_outer
     sql_on: ${accidents.aircraft_id} = ${aircrafts.id} ;;
