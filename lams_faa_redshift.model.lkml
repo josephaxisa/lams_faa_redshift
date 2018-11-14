@@ -5,7 +5,7 @@ include: "*.view"
 include: "one_to_many_example.explore.lkml"
 
 # LAMS
-# rule_exemptions: {E2: "don't want to join on pks"}
+# rule_exemptions: {E2: "do not want to join on pks"}
 
 explore: carrier_facts {}
 
