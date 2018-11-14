@@ -6,7 +6,7 @@ view: aircraft_models {
     sql: ${TABLE}.id ;;
   }
 
-  dimension: aircraft_id {
+  dimension: pk1_aircraft_id {
     primary_key: yes
     type: string
     sql: ${TABLE}.id ;;
