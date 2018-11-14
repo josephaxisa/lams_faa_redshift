@@ -1,4 +1,9 @@
 view: foo {
+  # LAMS
+  # rule_exemptions: {
+  #   T1: "foo"
+  #   K1: "bar"
+  # }
   derived_table: {
     sql: SELECT
         user_id as user_id
