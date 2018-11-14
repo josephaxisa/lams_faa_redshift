@@ -6,7 +6,6 @@ include: "*.view"
 explore: carrier_facts {}
 
 explore: accidents {
-  description: "test"
   join: aircrafts {
     type: left_outer
     sql_on: ${accidents.aircraft_id} = ${aircrafts.id} ;;
