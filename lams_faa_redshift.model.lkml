@@ -4,13 +4,9 @@ connection: "faa_redshift"
 include: "*.view"
 include: "one_to_many_example.explore.lkml"
 
-# LAMS
-# rule_exemptions: {E2: "do not want to join on pks"}
-
 explore: carrier_facts {}
 
 explore: accidents {
-  description: "Anything accidents related can be found here"
   join: aircrafts {
     type: left_outer
     sql_on: ${accidents.aircraft_id} = ${aircrafts.id} ;;
