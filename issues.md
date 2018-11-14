@@ -1,10 +1,10 @@
 ---
-title: Issues - 1⛔ 3⚠️  
+title: Issues - 0⛔ 3⚠️  
 navigation: true
 ---
 <p style="text-align:right;color:#cccs">
-Generated Wed, 14 Nov 2018 14:20:36 GMT
-<br><a href="http://35.177.130.99:8080/job/look-at-me-sideways/370/console">Build Log</a>
+Generated Wed, 14 Nov 2018 14:26:37 GMT
+<br><a href="http://35.177.130.99:8080/job/look-at-me-sideways/371/console">Build Log</a>
 </p>
 
 
@@ -13,45 +13,10 @@ Generated Wed, 14 Nov 2018 14:20:36 GMT
 <summary style="margin-left:-2em;border-bottom:solid 1px #333;">
 <b>Issues</b>
 (
-   1⛔ 
+
  3⚠️ 
 )
 </summary>
-
-
-
-<details style="margin-left: 2em" open="open">
-<summary style="margin-left:-2em;border-bottom:solid 1px #333;">
-<b>K1</b>
-(
-   1⛔ 
-
-)
-</summary>
-
-<table style="border:solid 1px #ccc">
-<thead style="background-color:darkblue;color:white"><tr>
-<th>Level</th>
-<th>Location</th>
-
-<th>Description</th>
-
-</tr></thead>
-<tbody>
-
-<tr>
-<td>⛔</td>
-<td>view: flights_view_creation <a href="/projects/lams_faa_redshift/files/carrier_facts.view.lkml#view:flights_view_creation" style="text-decoration: none">⧉</a></td>
-
-<td>No Primary Key Dimensions found in flights_view_creation</td>
-
-</tr>
-
-</tbody>
-</table>
-
-
-</details>
 
 
 
@@ -109,6 +74,57 @@ Generated Wed, 14 Nov 2018 14:20:36 GMT
 
 
 
+
+<details><summary><b>Exemptions</b></summary>
+
+<details style="margin-left: 0em" open="open">
+<summary style="margin-left:-2em;border-bottom:solid 1px #333;">
+<b></b>
+(
+   1⛔ 
+
+)
+</summary>
+
+
+
+<details style="margin-left: 2em" open="open">
+<summary style="margin-left:-2em;border-bottom:solid 1px #333;">
+<b>K1</b>
+(
+   1⛔ 
+
+)
+</summary>
+
+<table style="border:solid 1px #ccc">
+<thead style="background-color:darkblue;color:white"><tr>
+<th>Level</th>
+<th>Location</th>
+
+<th>Reason</th>
+
+</tr></thead>
+<tbody>
+
+<tr>
+<td>⛔</td>
+<td>view: flights_view_creation <a href="/projects/lams_faa_redshift/files/carrier_facts.view.lkml#view:flights_view_creation" style="text-decoration: none">⧉</a></td>
+
+<td>No pks needed here</td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+</details>
+
+
+</details>
+
+</details>
 
 
 
