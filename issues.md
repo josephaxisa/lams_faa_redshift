@@ -1,10 +1,10 @@
 ---
-title: Issues - 2⛔ 3⚠️  
+title: Issues - 0⛔ 5⚠️  
 navigation: true
 ---
 <p style="text-align:right;color:#cccs">
-Generated Wed, 14 Nov 2018 16:44:57 GMT
-<br><a href="http://35.177.130.99:8080/job/look-at-me-sideways/396/console">Build Log</a>
+Generated Wed, 14 Nov 2018 16:48:22 GMT
+<br><a href="http://35.177.130.99:8080/job/look-at-me-sideways/397/console">Build Log</a>
 </p>
 
 
@@ -13,8 +13,8 @@ Generated Wed, 14 Nov 2018 16:44:57 GMT
 <summary style="margin-left:-2em;border-bottom:solid 1px #333;">
 <b>Issues</b>
 (
-   2⛔ 
- 3⚠️ 
+
+ 5⚠️ 
 )
 </summary>
 
@@ -22,10 +22,10 @@ Generated Wed, 14 Nov 2018 16:44:57 GMT
 
 <details style="margin-left: 2em" open="open">
 <summary style="margin-left:-2em;border-bottom:solid 1px #333;">
-<b>K1</b>
+<b>K3</b>
 (
-   2⛔ 
 
+ 1⚠️ 
 )
 </summary>
 
@@ -40,18 +40,10 @@ Generated Wed, 14 Nov 2018 16:44:57 GMT
 <tbody>
 
 <tr>
-<td>⛔</td>
+<td>⚠️</td>
 <td>view: aircraft_models <a href="/projects/lams_faa_redshift/files/aircraft_models.view.lkml#view:aircraft_models" style="text-decoration: none">⧉</a></td>
 
-<td>No Primary Key Dimensions found in aircraft_models</td>
-
-</tr>
-
-<tr>
-<td>⛔</td>
-<td>view: flights_view_creation <a href="/projects/lams_faa_redshift/files/carrier_facts.view.lkml#view:flights_view_creation" style="text-decoration: none">⧉</a></td>
-
-<td>No Primary Key Dimensions found in flights_view_creation</td>
+<td>Primary Key Dimensions in aircraft_models are not declared before other dimensions</td>
 
 </tr>
 
@@ -68,7 +60,7 @@ Generated Wed, 14 Nov 2018 16:44:57 GMT
 <b>K4</b>
 (
 
- 3⚠️ 
+ 4⚠️ 
 )
 </summary>
 
@@ -81,6 +73,14 @@ Generated Wed, 14 Nov 2018 16:44:57 GMT
 
 </tr></thead>
 <tbody>
+
+<tr>
+<td>⚠️</td>
+<td>view: aircraft_models <a href="/projects/lams_faa_redshift/files/aircraft_models.view.lkml#view:aircraft_models" style="text-decoration: none">⧉</a></td>
+
+<td>Primary Key Dimensions (pk1_aircraft_id) in aircraft_models are not hidden</td>
+
+</tr>
 
 <tr>
 <td>⚠️</td>
@@ -117,6 +117,57 @@ Generated Wed, 14 Nov 2018 16:44:57 GMT
 
 
 
+
+<details><summary><b>Exemptions</b></summary>
+
+<details style="margin-left: 0em" open="open">
+<summary style="margin-left:-2em;border-bottom:solid 1px #333;">
+<b></b>
+(
+   1⛔ 
+
+)
+</summary>
+
+
+
+<details style="margin-left: 2em" open="open">
+<summary style="margin-left:-2em;border-bottom:solid 1px #333;">
+<b>K1</b>
+(
+   1⛔ 
+
+)
+</summary>
+
+<table style="border:solid 1px #ccc">
+<thead style="background-color:darkblue;color:white"><tr>
+<th>Level</th>
+<th>Location</th>
+
+<th>Reason</th>
+
+</tr></thead>
+<tbody>
+
+<tr>
+<td>⛔</td>
+<td>view: flights_view_creation <a href="/projects/lams_faa_redshift/files/carrier_facts.view.lkml#view:flights_view_creation" style="text-decoration: none">⧉</a></td>
+
+<td>bob told me it is okay to not use pks</td>
+
+</tr>
+
+</tbody>
+</table>
+
+
+</details>
+
+
+</details>
+
+</details>
 
 
 
