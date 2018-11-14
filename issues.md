@@ -1,10 +1,10 @@
 ---
-title: Issues - 23⛔ 98⚠️  
+title: Issues - 9⛔ 97⚠️  
 navigation: true
 ---
 <p style="text-align:right;color:#cccs">
-Generated Wed, 14 Nov 2018 11:50:45 GMT
-<br><a href="http://35.177.130.99:8080/job/look-at-me-sideways/339/console">Build Log</a>
+Generated Wed, 14 Nov 2018 12:28:26 GMT
+<br><a href="http://35.177.130.99:8080/job/look-at-me-sideways/346/console">Build Log</a>
 </p>
 
 
@@ -13,8 +13,8 @@ Generated Wed, 14 Nov 2018 11:50:45 GMT
 <summary style="margin-left:-2em;border-bottom:solid 1px #333;">
 <b>Issues</b>
 (
-   23⛔ 
- 98⚠️ 
+   9⛔ 
+ 97⚠️ 
 )
 </summary>
 
@@ -24,7 +24,7 @@ Generated Wed, 14 Nov 2018 11:50:45 GMT
 <summary style="margin-left:-2em;border-bottom:solid 1px #333;">
 <b>E2</b>
 (
-   17⛔ 
+   6⛔ 
 
 )
 </summary>
@@ -87,94 +87,6 @@ Generated Wed, 14 Nov 2018 11:50:45 GMT
 
 </tr>
 
-<tr>
-<td>⛔</td>
-<td>model:lams_faa_redshift&#47;explore:carriers&#47;join:carrier_joinpaths <a href="/projects/look-at-me-sideways/files/lams_faa_redshift.model.lkml" style="text-decoration: none">⧉</a></td>
-
-<td>Compound equality constraints are only established by AND'ed equality expressions. OR is not allowed.</td>
-
-</tr>
-
-<tr>
-<td>⛔</td>
-<td>model:lams_faa_redshift&#47;explore:carriers&#47;join:carrier_measures <a href="/projects/look-at-me-sideways/files/lams_faa_redshift.model.lkml" style="text-decoration: none">⧉</a></td>
-
-<td>No PKs dimensions used for carrier_measures in carrier_measures join</td>
-
-</tr>
-
-<tr>
-<td>⛔</td>
-<td>model:lams_faa_redshift&#47;explore:carriers&#47;join:carrier_measures <a href="/projects/look-at-me-sideways/files/lams_faa_redshift.model.lkml" style="text-decoration: none">⧉</a></td>
-
-<td>No PKs dimensions used for carrier_joinpaths in carrier_measures join</td>
-
-</tr>
-
-<tr>
-<td>⛔</td>
-<td>model:lams_faa_redshift&#47;explore:carriers&#47;join:carrier_measures <a href="/projects/look-at-me-sideways/files/lams_faa_redshift.model.lkml" style="text-decoration: none">⧉</a></td>
-
-<td>No PKs dimensions used for carriers in carrier_measures join</td>
-
-</tr>
-
-<tr>
-<td>⛔</td>
-<td>model:lams_faa_redshift&#47;explore:carriers&#47;join:flights <a href="/projects/look-at-me-sideways/files/lams_faa_redshift.model.lkml" style="text-decoration: none">⧉</a></td>
-
-<td>No PKs dimensions used for flights in flights join</td>
-
-</tr>
-
-<tr>
-<td>⛔</td>
-<td>model:lams_faa_redshift&#47;explore:carriers&#47;join:flights <a href="/projects/look-at-me-sideways/files/lams_faa_redshift.model.lkml" style="text-decoration: none">⧉</a></td>
-
-<td>No PKs dimensions used for carrier_joinpaths in flights join</td>
-
-</tr>
-
-<tr>
-<td>⛔</td>
-<td>model:lams_faa_redshift&#47;explore:carriers&#47;join:flights <a href="/projects/look-at-me-sideways/files/lams_faa_redshift.model.lkml" style="text-decoration: none">⧉</a></td>
-
-<td>No PKs dimensions used for carriers in flights join</td>
-
-</tr>
-
-<tr>
-<td>⛔</td>
-<td>model:lams_faa_redshift&#47;explore:carriers&#47;join:accidents <a href="/projects/look-at-me-sideways/files/lams_faa_redshift.model.lkml" style="text-decoration: none">⧉</a></td>
-
-<td>No PKs dimensions used for accidents in accidents join</td>
-
-</tr>
-
-<tr>
-<td>⛔</td>
-<td>model:lams_faa_redshift&#47;explore:carriers&#47;join:accidents <a href="/projects/look-at-me-sideways/files/lams_faa_redshift.model.lkml" style="text-decoration: none">⧉</a></td>
-
-<td>No PKs dimensions used for carrier_joinpaths in accidents join</td>
-
-</tr>
-
-<tr>
-<td>⛔</td>
-<td>model:lams_faa_redshift&#47;explore:carriers&#47;join:accidents <a href="/projects/look-at-me-sideways/files/lams_faa_redshift.model.lkml" style="text-decoration: none">⧉</a></td>
-
-<td>No PKs dimensions used for carriers in accidents join</td>
-
-</tr>
-
-<tr>
-<td>⛔</td>
-<td>model:lams_faa_redshift&#47;explore:carriers&#47;join:combined_date <a href="/projects/look-at-me-sideways/files/lams_faa_redshift.model.lkml" style="text-decoration: none">⧉</a></td>
-
-<td>No PKs dimensions used for combined_date in combined_date join</td>
-
-</tr>
-
 </tbody>
 </table>
 
@@ -231,7 +143,7 @@ Generated Wed, 14 Nov 2018 11:50:45 GMT
 <b>F4</b>
 (
 
- 95⚠️ 
+ 94⚠️ 
 )
 </summary>
 
@@ -997,14 +909,6 @@ Generated Wed, 14 Nov 2018 11:50:45 GMT
 
 </tr>
 
-<tr>
-<td>⚠️</td>
-<td>view:carrier_summaries&#47;field:first_flight_time <a href="/projects/look-at-me-sideways/files/one_to_many_example.explore.lkml#view:carrier_summaries/field:first_flight_time" style="text-decoration: none">⧉</a></td>
-
-<td>view:carrier_summaries/field:first_flight_time is missing a description</td>
-
-</tr>
-
 </tbody>
 </table>
 
@@ -1017,7 +921,7 @@ Generated Wed, 14 Nov 2018 11:50:45 GMT
 <summary style="margin-left:-2em;border-bottom:solid 1px #333;">
 <b>K1</b>
 (
-   4⛔ 
+   1⛔ 
 
 )
 </summary>
@@ -1037,30 +941,6 @@ Generated Wed, 14 Nov 2018 11:50:45 GMT
 <td>view: flights_view_creation <a href="/projects/look-at-me-sideways/files/carrier_facts.view.lkml#view:flights_view_creation" style="text-decoration: none">⧉</a></td>
 
 <td>No Primary Key Dimensions found in flights_view_creation</td>
-
-</tr>
-
-<tr>
-<td>⛔</td>
-<td>view: carrier_joinpaths <a href="/projects/look-at-me-sideways/files/one_to_many_example.explore.lkml#view:carrier_joinpaths" style="text-decoration: none">⧉</a></td>
-
-<td>No Primary Key Dimensions found in carrier_joinpaths</td>
-
-</tr>
-
-<tr>
-<td>⛔</td>
-<td>view: carrier_summaries <a href="/projects/look-at-me-sideways/files/one_to_many_example.explore.lkml#view:carrier_summaries" style="text-decoration: none">⧉</a></td>
-
-<td>No Primary Key Dimensions found in carrier_summaries</td>
-
-</tr>
-
-<tr>
-<td>⛔</td>
-<td>view: carrier_subtotals <a href="/projects/look-at-me-sideways/files/one_to_many_example.explore.lkml#view:carrier_subtotals" style="text-decoration: none">⧉</a></td>
-
-<td>No Primary Key Dimensions found in carrier_subtotals</td>
 
 </tr>
 
