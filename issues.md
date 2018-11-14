@@ -1,17 +1,22 @@
 ---
-title: Issues - 2⛔ 0⚠️  
+title: No Issues
 navigation: true
 ---
 <p style="text-align:right;color:#cccs">
-Generated Wed, 14 Nov 2018 18:05:29 GMT
-<br><a href="http://35.177.130.99:8080/job/look-at-me-sideways/402/console">Build Log</a>
+Generated Wed, 14 Nov 2018 18:08:17 GMT
+<br><a href="http://35.177.130.99:8080/job/look-at-me-sideways/403/console">Build Log</a>
 </p>
 
 
+<p>No issues to report</p>
+
+
+
+<details><summary><b>Exemptions</b></summary>
 
 <details style="margin-left: 0em" open="open">
 <summary style="margin-left:-2em;border-bottom:solid 1px #333;">
-<b>Issues</b>
+<b></b>
 (
    2⛔ 
 
@@ -34,7 +39,7 @@ Generated Wed, 14 Nov 2018 18:05:29 GMT
 <th>Level</th>
 <th>Location</th>
 
-<th>Description</th>
+<th>Reason</th>
 
 </tr></thead>
 <tbody>
@@ -43,7 +48,7 @@ Generated Wed, 14 Nov 2018 18:05:29 GMT
 <td>⛔</td>
 <td>view: foo <a href="/projects/look-at-me-sideways/files/foo.view.lkml#view:foo" style="text-decoration: none">⧉</a></td>
 
-<td>No Primary Key Dimensions found in foo</td>
+<td>bar</td>
 
 </tr>
 
@@ -69,7 +74,7 @@ Generated Wed, 14 Nov 2018 18:05:29 GMT
 <th>Level</th>
 <th>Location</th>
 
-<th>Description</th>
+<th>Reason</th>
 
 </tr></thead>
 <tbody>
@@ -78,7 +83,7 @@ Generated Wed, 14 Nov 2018 18:05:29 GMT
 <td>⛔</td>
 <td>view: foo <a href="/projects/look-at-me-sideways/files/foo.view.lkml#view:foo" style="text-decoration: none">⧉</a></td>
 
-<td>Triggered PDTs should use datagroups or persist_for.</td>
+<td>foo</td>
 
 </tr>
 
@@ -91,8 +96,7 @@ Generated Wed, 14 Nov 2018 18:05:29 GMT
 
 </details>
 
-
-
+</details>
 
 
 
