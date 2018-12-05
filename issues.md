@@ -1,17 +1,32 @@
 ---
-title: Issues - 1⛔ 0⚠️  
+title: No Issues
 navigation: true
 ---
 <p style="text-align:right;color:#cccs">
-Generated Wed, 05 Dec 2018 18:33:26 GMT
-<br><a href="http://35.177.130.99:8080/job/look-at-me-sideways/16/console">Build Log</a>
+Generated Wed, 05 Dec 2018 18:35:26 GMT
+<br><a href="http://35.177.130.99:8080/job/look-at-me-sideways/17/console">Build Log</a>
 </p>
+
+
+<p>No issues to report</p>
+
+
+
+
+<details style="margin-left: 3em" >
+<summary style="margin-left:-1em;border-bottom:solid 1px #333;">
+<b>Exemptions</b>
+(
+   2⛔ 
+
+)
+</summary>
 
 
 
 <details style="margin-left: 3em" open="open">
 <summary style="margin-left:-1em;border-bottom:solid 1px #333;">
-<b>Issues</b>
+<b><a href="https://fabio-looker.github.io/look-at-me-sideways/rules.html#k1">K1</a>. Primary keys required</b>
 (
    1⛔ 
 
@@ -22,7 +37,7 @@ Generated Wed, 05 Dec 2018 18:33:26 GMT
 
 <details style="margin-left: 3em" open="open">
 <summary style="margin-left:-1em;border-bottom:solid 1px #333;">
-<b><a href="https://fabio-looker.github.io/look-at-me-sideways/rules.html#k1">K1</a>. Primary keys required</b>
+<b>bar</b>
 (
    1⛔ 
 
@@ -51,19 +66,6 @@ Generated Wed, 05 Dec 2018 18:33:26 GMT
 
 
 </details>
-
-
-
-
-
-<details style="margin-left: 3em" >
-<summary style="margin-left:-1em;border-bottom:solid 1px #333;">
-<b>Exemptions</b>
-(
-   1⛔ 
-
-)
-</summary>
 
 
 
