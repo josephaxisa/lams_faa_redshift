@@ -2,7 +2,6 @@ view: foo {
   # LAMS
   # rule_exemptions: {
   #   K1: "foobar"
-  #   T1: "baz"
   #
   # }
   #
