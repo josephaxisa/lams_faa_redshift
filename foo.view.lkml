@@ -1,7 +1,6 @@
 view: foo {
   # LAMS
   # rule_exemptions: {
-  #   T1: "foo"
   # }
   #
   derived_table: {
