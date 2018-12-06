@@ -3,8 +3,8 @@ title: Issues - 1⛔ 0⚠️
 navigation: true
 ---
 <p style="text-align:right;color:#cccs">
-Generated Thu, 06 Dec 2018 15:39:26 GMT
-<br><a href="http://35.177.130.99:8080/job/look-at-me-sideways/30/console">Build Log</a>
+Generated Thu, 06 Dec 2018 15:47:27 GMT
+<br><a href="http://35.177.130.99:8080/job/look-at-me-sideways/6/console">Build Log</a>
 </p>
 
 
@@ -80,7 +80,7 @@ Generated Thu, 06 Dec 2018 15:39:26 GMT
 
 <details style="margin-left: 3em" open="open">
 <summary style="margin-left:-1em;border-bottom:solid 1px #333;">
-<b>foo</b>
+<b>foobar</b>
 (
    1⛔ 
 
