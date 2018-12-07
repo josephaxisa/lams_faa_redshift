@@ -3,8 +3,8 @@ title: No Issues
 navigation: true
 ---
 <p style="text-align:right;color:#cccs">
-Generated Thu, 06 Dec 2018 16:59:15 GMT
-<br><a href="http://35.177.130.99:8080/job/look-at-me-sideways/2/console">Build Log</a>
+Generated Fri, 07 Dec 2018 16:01:21 GMT
+<br><a href="http://35.177.130.99:8080/job/look-at-me-sideways/1/console">Build Log</a>
 </p>
 
 
