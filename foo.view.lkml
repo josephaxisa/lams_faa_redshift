@@ -3,6 +3,7 @@ view: foo {
   # rule_exemptions: {
   #   K1: "foobar"
   #   T2: "bar"
+  #   T1: "baz"
   #
   # }
   derived_table: {
