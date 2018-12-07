@@ -1,10 +1,10 @@
 ---
-title: Issues - 1⛔ 0⚠️  
+title: Issues - 2⛔ 0⚠️  
 navigation: true
 ---
 <p style="text-align:right;color:#cccs">
-Generated Fri, 07 Dec 2018 16:03:27 GMT
-<br><a href="http://35.177.130.99:8080/job/look-at-me-sideways/2/console">Build Log</a>
+Generated Fri, 07 Dec 2018 16:56:49 GMT
+<br><a href="http://18.130.122.52:8080/job/look_at_me_sideways/1/">Build Log</a>
 </p>
 
 
@@ -13,7 +13,7 @@ Generated Fri, 07 Dec 2018 16:03:27 GMT
 <summary style="margin-left:-1em;border-bottom:solid 1px #333;">
 <b>Issues</b>
 (
-   1⛔ 
+   2⛔ 
 
 )
 </summary>
@@ -41,6 +41,37 @@ Generated Fri, 07 Dec 2018 16:03:27 GMT
 <td>⛔</td>
 <td>view: foo <a href="&#47;projects&#47;workspace&#47;files&#47;foo.view.lkml#view:foo" style="text-decoration: none">⧉</a></td>
 <td>Triggered PDTs should use datagroups or persist_for.</td>
+</tr>
+
+</tbody>
+</table>
+
+
+</details>
+
+
+
+<details style="margin-left: 3em" open="open">
+<summary style="margin-left:-1em;border-bottom:solid 1px #333;">
+<b><a href="https://fabio-looker.github.io/look-at-me-sideways/rules.html#t2">T2</a>. Primary keys required</b>
+(
+   1⛔ 
+
+)
+</summary>
+
+<table style="border:solid 1px #ccc">
+<thead style="background-color:darkblue;color:white"><tr>
+<th>Level</th>
+<th>Location</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+
+<tr>
+<td>⛔</td>
+<td>view: foo <a href="&#47;projects&#47;workspace&#47;files&#47;foo.view.lkml#view:foo" style="text-decoration: none">⧉</a></td>
+<td>No Primary Key columns/selectAliases found in foo</td>
 </tr>
 
 </tbody>
@@ -113,7 +144,6 @@ Generated Fri, 07 Dec 2018 16:03:27 GMT
 
 </details>
 
-</details>
 
 
 
