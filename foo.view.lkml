@@ -5,6 +5,7 @@ view: foo {
   #   T1: "bar"
   #   T2: "baz"
   #
+  #
   # }
   derived_table: {
     sql: SELECT
