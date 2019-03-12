@@ -1,7 +1,6 @@
 project_name: "lams_faa_redshift"
 
 # LAMS
-#
 # rule_exemptions: {
 #   T1: "Project exempt from transformation rules"
 #   T2: "Project exempt from transformation rules"
