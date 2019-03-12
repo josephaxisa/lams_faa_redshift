@@ -1,11 +1,5 @@
 view: foo {
   # LAMS
-  # rule_exemptions: {
-  #   K1: "foobar"
-  #   T1: "bar"
-  #   T2: "baz"
-  #
-  # }
   derived_table: {
     sql: SELECT
         user_id as user_id
@@ -15,5 +9,8 @@ view: foo {
       GROUP BY user_id
       ;;
     sql_trigger_value: SELECT CUR_DATE()  ;;
+  }
+  dimension: pk1_user_id {
+    hidden: yes
   }
 }
