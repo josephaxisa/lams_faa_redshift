@@ -3,8 +3,8 @@ title: No Issues
 navigation: true
 ---
 <p style="text-align:right;color:#cccs">
-Generated Mon, 10 Dec 2018 15:32:27 GMT
-<br><a href="http://18.130.122.52:8080/job/look_at_me_sideways/4/">Build Log</a>
+Generated Tue, 12 Mar 2019 16:22:11 GMT
+<br><a href="http://18.130.122.52:8080/job/look_at_me_sideways/3/">Build Log</a>
 </p>
 
 
@@ -26,7 +26,7 @@ Generated Mon, 10 Dec 2018 15:32:27 GMT
 
 <details style="margin-left: 3em" open="open">
 <summary style="margin-left:-1em;border-bottom:solid 1px #333;">
-<b><a href="https://fabio-looker.github.io/look-at-me-sideways/rules.html#k1">K1</a>. Primary keys required</b>
+<b><a href="https://looker-open-source.github.io/look-at-me-sideways/rules.html#k1">K1</a>. Primary keys required</b>
 (
    1⛔ 
 
@@ -71,7 +71,7 @@ Generated Mon, 10 Dec 2018 15:32:27 GMT
 
 <details style="margin-left: 3em" open="open">
 <summary style="margin-left:-1em;border-bottom:solid 1px #333;">
-<b><a href="https://fabio-looker.github.io/look-at-me-sideways/rules.html#t1">T1</a>. Triggers use datagroups</b>
+<b><a href="https://looker-open-source.github.io/look-at-me-sideways/rules.html#t1">T1</a>. Triggers use datagroups</b>
 (
    1⛔ 
 
@@ -116,7 +116,7 @@ Generated Mon, 10 Dec 2018 15:32:27 GMT
 
 <details style="margin-left: 3em" open="open">
 <summary style="margin-left:-1em;border-bottom:solid 1px #333;">
-<b><a href="https://fabio-looker.github.io/look-at-me-sideways/rules.html#t2">T2</a>. Primary keys required</b>
+<b><a href="https://looker-open-source.github.io/look-at-me-sideways/rules.html#t2">T2</a>. Primary keys required</b>
 (
    1⛔ 
 
