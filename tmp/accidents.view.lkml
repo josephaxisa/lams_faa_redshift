@@ -1,7 +1,7 @@
 view: accidents {
   sql_table_name: faa.accidents ;;
 
-  dimension: pk1_accident_id {
+  dimension: accident_id {
     primary_key: yes
     hidden: yes
     type: number
